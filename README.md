@@ -18,3 +18,24 @@ CLIENT_SECRET = 'client-secret'
 REDIRECT_URI = 'redirect-uri'
 UPLOAD_FOLDER = '/home/{usr}/backup'
 ```
+
+## Dependencies
+```bash
+sudo apt-get update
+sudo apt-get install python3-pip
+```
+
+It might be necessary to add this repository
+```bash
+sudo add-apt-repository universe
+```
+
+exifread
+```bash
+pip install exifread
+```
+
+ffprobe
+``` bash
+sudo apt-get install ffmpeg
+```
