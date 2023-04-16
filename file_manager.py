@@ -30,13 +30,13 @@ def process_folder(folder_path):
             # Open the file in binary mode and read the EXIF tags
             with open(file_path, 'rb') as f:
                 tags = exifread.process_file(f)
-                print(tags.keys())
+                # print(tags.keys())
                 # Get the original creation date from the EXIF tags
                 if 'EXIF DateTimeOriginal' in tags:
                     creation_date = tags['EXIF DateTimeOriginal']
                     creation_date_str = str(creation_date)
                     new_folder = f"{creation_date_str[0:4]}/{creation_date_str[5:7]}/{creation_date_str[8:10]}"
-                    new_folder_path = os.path.join(dirpath, new_folder);
+                    new_folder_path = os.path.join(folder_path, new_folder);
                     ensure_folder_exists(new_folder_path)
                     # Use the move() function to move the file
                     shutil.move(file_path, new_folder_path)
@@ -44,7 +44,7 @@ def process_folder(folder_path):
                     # If the creation date is not available in the EXIF tags,
                     # fall back to the file's metadata creation time
                     creation_date = datetime.datetime.fromtimestamp(os.path.getctime(file_path))
-                print(f"The original creation date of {file_path}: {creation_date}")
+                # print(f"The original creation date of {file_path}: {creation_date}")
 
 if __name__ == "__main__":
     arg1 = sys.argv[1]
