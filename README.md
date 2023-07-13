@@ -1,9 +1,9 @@
 # Table of contents
 1. [Backup server](#backup-server)
-  1. [Config.py](#config.py)
+    1. [Config.py](#config_py)
 2. [File manager](#file-manager)
-  1. [Example](#example)
-  2. [Running](#running)
+    1. [Example](#example)
+    2. [Running](#running)
 3. [Dependencies](#dependencies)
 
 # backup-server
