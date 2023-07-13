@@ -1,4 +1,10 @@
-[[_TOC_]]
+# Table of contents
+1. [Backup server](#backup-server)
+  1. [Config.py](#config.py)
+2. [File manager](#file-manager)
+  1. [Example](#example)
+  2. [Running](#running)
+3. [Dependencies](#dependencies)
 
 # backup-server
 
@@ -21,7 +27,21 @@ REDIRECT_URI = 'redirect-uri'
 UPLOAD_FOLDER = '/home/{usr}/backup'
 ```
 
-## Dependencies
+# file-manager
+
+Move/organize all media files on classified subfolders year/month/day. Metadata is used to find all date information to create those folders.
+
+## Example
+
+If we use /my-folder/pictures all data will be moved to /my-folder/pictures/yyyy/mm/dd.
+
+## Running
+
+```
+python3 file-manager.py /mnt/c/Users/myUser/Pictures
+```
+
+# Dependencies
 ```bash
 sudo apt-get update
 sudo apt-get install python3-pip
@@ -40,18 +60,4 @@ pip install exifread
 ffprobe
 ``` bash
 sudo apt-get install ffmpeg
-```
-
-# file-manager
-
-Move/organize all media files on classified subfolders year/month/day. Metadata is used to find all date information to create those folders.
-
-## Exemple
-
-If we use /my-folder/pictures all data will be moved to /my-folder/pictures/yyyy/mm/dd.
-
-## Running
-
-```
-python3 file-manager.py /mnt/c/Users/myUser/Pictures
 ```
