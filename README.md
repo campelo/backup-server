@@ -1,3 +1,5 @@
+[[_TOC_]]
+
 # backup-server
 
 ## config.py
@@ -38,4 +40,18 @@ pip install exifread
 ffprobe
 ``` bash
 sudo apt-get install ffmpeg
+```
+
+# file-manager
+
+Move/organize all media files on classified subfolders year/month/day. Metadata is used to find all date information to create those folders.
+
+## Exemple
+
+If we use /my-folder/pictures all data will be moved to /my-folder/pictures/yyyy/mm/dd.
+
+## Running
+
+```
+python3 file-manager.py /mnt/c/Users/myUser/Pictures
 ```
